@@ -79,7 +79,7 @@ sudo chmod 777 /var/run/docker.sock #not good security practice - Would love the
 ### Step 2: Set-up Gogs (code repo), dvwa, and deploy sock-shop k8s microservices demo
 
 ```bash
-docker pull vulnerables/web-dvwa:lastest
+docker pull vulnerables/web-dvwa:latest #fixing a typo
 docker pull mysql:latest
 docker pull gogs/gogs:latest
 
@@ -102,7 +102,7 @@ sudo $HOME/prisma_compute_deploy/twistlock.sh -s onebox
 ### Step 4: Create Docker Networks
 
 ```bash
-docker network create --driver bridge app-net
+docker network create --driver bridge dev-net
 ```
 
 ### Step 5: Deploy the DVWA
